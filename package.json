@@ -1,0 +1,44 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Showcase the work I've done so far",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabienNeibaf/Portfolio.git"
+  },
+  "keywords": [
+    "software",
+    "development"
+  ],
+  "author": "Fabien RAKOTOMAMPIANDRA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabienNeibaf/Portfolio/issues"
+  },
+  "homepage": "https://github.com/FabienNeibaf/Portfolio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "react-hot-loader": "^4.12.18",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
