@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/FabienNeibaf/Portfolio/issues"
   },
-  "homepage": "https://github.com/FabienNeibaf/Portfolio#readme",
+  "homepage": "https://github.com/fabienneibaf.github.io/Portfolio",
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/plugin-transform-react-jsx": "^7.7.4",
