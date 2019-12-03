@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Roboto:500|Kalam|Open+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Pacifico|Open+Sans:300,400,700&display=swap');
 
 * {
   font-weight: 300;
@@ -18,11 +18,16 @@ ul {
   list-style: none;
 }
 
+::placeholder {
+  color: #8184a5;
+}
+
 .title {
+  color: #080d3c;
+  font-size: 1.5em;
   margin-top: 10px;
   text-align: center;
   padding: 20px 10px;
-  font-size: 1.5em;
   font-family: Montserrat;
 }
 
@@ -43,10 +48,10 @@ ul {
   .brand {
     flex: auto;
     padding: 0 3%;
-    color: #1450d6;
-    font-size: 2.5em;
+    font-size: 2em;
+    color: #2016bb;
     font-weight: 700;
-    font-family: Kalam;
+    font-family: Pacifico;
 
     @media (max-width: 500px) {
       font-size: 1.5em;
@@ -59,7 +64,7 @@ ul {
 
     li {
       a {
-        color: #1450d6;
+        color: #2016bb;
         padding: 5px 20px;
         text-decoration: none;
         font-family: Montserrat;
@@ -71,7 +76,7 @@ ul {
         }
 
         &:hover {
-          border-bottom: 3px solid #1450d6;
+          border-bottom: 3px solid #2016bb;
         }
       }
     }
@@ -90,7 +95,6 @@ ul {
 
   .title {
     margin-top: 0;
-    color: #0a0c20;
     font-size: 2.1em;
     line-height: 1.5;
     max-width: 1000px;
@@ -105,7 +109,7 @@ ul {
   }
 
   p {
-    font-size: 1.2em;
+    font-size: 1.3em;
 
     @media (max-width: 500px) {
       font-size: 1em;
@@ -192,10 +196,14 @@ ul {
 
 #Contact {
   padding: 20px;
-  color: #fff;
+  color: #ece9ff;
   position: relative;
   background: #070815;
   min-height: calc(100vh - 150px);
+
+  .title {
+    color: #ece9ff;
+  }
 
   form {
     margin: auto;
@@ -213,12 +221,12 @@ ul {
 
       input,
       textarea {
-        color: #fff;
+        color: #ece9ff;
         padding: 10px;
         font-size: 0.9em;
         border-radius: 2px;
         background: inherit;
-        border: 1px solid #fff;
+        border: 1px solid #ece9ff;
       }
 
       textarea {
@@ -230,7 +238,7 @@ ul {
     button {
       width: 200px;
       margin: auto;
-      color: #fff;
+      color: #ece9ff;
       display: block;
       max-width: 90%;
       cursor: pointer;
@@ -238,11 +246,11 @@ ul {
       padding: 5px 10px;
       border-radius: 2px;
       background: inherit;
-      border: 1px solid #fff;
+      border: 1px solid #ece9ff;
 
       &:active {
         color: #000;
-        background: #fff;
+        background: #ece9ff;
       }
     }
   }
@@ -251,7 +259,7 @@ ul {
 #Toast {
   top: 5%;
   right: 10%;
-  color: #f0ffe5;
+  color: #ece9ff;
   font-weight: 700;
   font-size: 0.9em;
   padding: 10px 20px;
