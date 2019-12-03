@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import PropTypes from 'prop-types';
 import Toast from './Toast';
 
 emailjs.init('user_4osATFQVjKl2Z0155XrqM');
@@ -8,13 +9,13 @@ const Error = ({ msg }) => (
   <div>
     {msg ? <p className="error">{msg}</p> : null}
   </div>
-)
+);
 
 const initalState = {
   email: '',
   message: '',
   toastMsg: null,
-  errors: { email: null, message: null }
+  errors: { email: null, message: null },
 };
 
 const Contact = () => {
@@ -23,7 +24,7 @@ const Contact = () => {
   const showToast = (msg) => {
     setState((prevState) => ({ ...prevState, toastMsg: msg }));
     setTimeout(() => setState(initalState), 3000);
-  }
+  };
 
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -33,7 +34,7 @@ const Contact = () => {
       errors: {
         ...prevState.errors,
         [name]: value === '' ? 'This field is required' : null,
-      }
+      },
     }));
   };
 
@@ -42,18 +43,18 @@ const Contact = () => {
     const { email, message } = state;
 
     if (email === '' || message === '') {
-      setState(prevState => ({
+      setState((prevState) => ({
         ...prevState,
         errors: {
           email: email === '' ? 'This field is required' : null,
-          message: message === '' ? 'This field is required' : null
-        }
+          message: message === '' ? 'This field is required' : null,
+        },
       }));
     } else {
       const templateParams = {
         reply_to: email,
         from_email: email,
-        message: message,
+        message,
       };
 
       emailjs.send('gmail', 'template_moSKSqTG', templateParams)
@@ -92,6 +93,14 @@ const Contact = () => {
       </form>
     </section>
   );
+};
+
+Error.defaultProps = {
+  msg: null,
+};
+
+Error.propTypes = {
+  msg: PropTypes.string,
 };
 
 export default Contact;

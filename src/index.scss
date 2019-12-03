@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Italianno|Kaushan+Script|Open+Sans:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Roboto:500|Kalam|Open+Sans:300,400,700&display=swap');
 
 * {
   font-weight: 300;
@@ -20,9 +20,10 @@ ul {
 
 .title {
   margin-top: 10px;
-  font-weight: 400;
   text-align: center;
   padding: 20px 10px;
+  font-size: 1.5em;
+  font-family: Montserrat;
 }
 
 .error {
@@ -37,14 +38,15 @@ ul {
   padding: 10px;
   display: flex;
   align-items: center;
+  background: #f8f5ff;
 
   .brand {
-    flex: 1;
-    color: #0003a6;
-    font-size: 2em;
+    flex: auto;
+    padding: 0 3%;
+    color: #1450d6;
+    font-size: 2.5em;
     font-weight: 700;
-    text-align: center;
-    font-family: Italianno;
+    font-family: Kalam;
 
     @media (max-width: 500px) {
       font-size: 1.5em;
@@ -52,16 +54,15 @@ ul {
   }
 
   .nav {
-    flex: 10;
     display: flex;
     justify-content: center;
 
     li {
       a {
-        color: #222;
-        font-size: 1.2em;
+        color: #1450d6;
         padding: 5px 20px;
         text-decoration: none;
+        font-family: Montserrat;
         border-bottom: 3px solid transparent;
 
         @media (max-width: 500px) {
@@ -70,14 +71,10 @@ ul {
         }
 
         &:hover {
-          border-bottom: 3px solid #16181e;
+          border-bottom: 3px solid #1450d6;
         }
       }
     }
-  }
-
-  .offset {
-    flex: 1;
   }
 }
 
@@ -86,6 +83,7 @@ ul {
   display: flex;
   text-align: center;
   align-items: center;
+  background: #f8f5ff;
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - 100px);
@@ -93,16 +91,16 @@ ul {
   .title {
     margin-top: 0;
     color: #0a0c20;
-    font-size: 2.3em;
-    line-height: 1.7;
+    font-size: 2.1em;
+    line-height: 1.5;
     max-width: 1000px;
 
     @media (max-width: 950px) {
-      font-size: 1.5em;
+      font-size: 1.7em;
     }
 
     @media (max-width: 500px) {
-      font-size: 1.2em;
+      font-size: 1.4em;
     }
   }
 
@@ -115,11 +113,11 @@ ul {
   }
 
   img {
-    width: 200px;
-    height: 190px;
+    width: 270px;
+    height: 260px;
     margin-top: 20px;
-    min-width: 200px;
-    min-height: 190px;
+    min-width: 270px;
+    min-height: 260px;
     border-radius: 50%;
     background: #f7f7f7;
 
@@ -136,7 +134,7 @@ ul {
 #Projects {
   padding: 10px;
   min-height: 100vh;
-  background: #f3f4ff;
+  background: #e9ebff;
 
   ul {
     margin: auto;
@@ -267,7 +265,7 @@ ul {
 #Footer {
   padding: 5px;
   display: flex;
-  color: #dcffc4;
+  color: #ece9ff;
   font-size: 0.8em;
   min-height: 150px;
   text-align: center;
@@ -290,14 +288,14 @@ ul {
         width: 25px;
         height: 25px;
         margin: 5px;
-        fill: #859d0d;
+        fill: #9fa4ff;
 
         &:hover {
-          fill: #8ec80f;
+          fill: #d0d3ff;
         }
 
         &.angel_svg__angel:hover path:last-child {
-          fill: #8ec80f;
+          fill: #d0d3ff;
         }
       }
     }

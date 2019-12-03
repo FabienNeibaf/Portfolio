@@ -45,7 +45,7 @@ const Item = ({ item }) => (
 const Projects = () => (
   <section id="Projects">
     <h2 className="title">
-      Here are the projects I&apos;ve been working on so far
+      My Recent Work
     </h2>
     <ul>
       {list.map((item) => <Item key={item.id} item={item} />)}
