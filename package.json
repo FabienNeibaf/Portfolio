@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "start": "webpack-dev-server --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
