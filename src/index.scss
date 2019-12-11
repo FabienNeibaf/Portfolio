@@ -13,6 +13,12 @@ body {
   margin: 0;
 }
 
+body {
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -152,6 +158,7 @@ ul {
     height: 300px;
     margin: 2% 2.5%;
     flex-wrap: wrap;
+    position: relative;
     border-radius: 5px;
     background: #f7f7f7;
     border: 1px solid #444;
@@ -190,6 +197,47 @@ ul {
       width: 100%;
       height: 100%;
       border-radius: 2px;
+    }
+
+    .external {
+      bottom: 0;
+      width: 100%;
+      padding: 2%;
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.815);
+      justify-content: center;
+
+      a {
+        margin: 5px;
+        color: #000;
+        display: flex;
+        min-width: 128px;
+        font-size: 0.9em;
+        font-weight: 400;
+        padding: 5px 10px;
+        border-radius: 2px;
+        align-items: center;
+        background: #d0d3ff;
+        text-decoration: none;
+        justify-content: center;
+
+        @media (max-width: 400px) {
+          min-width: auto;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+
+          @media (max-width: 400px) {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
     }
   }
 }
