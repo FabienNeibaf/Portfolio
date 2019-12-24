@@ -8,7 +8,8 @@ I have more than 3 years experience on building desktop and web application. And
 - Calculator
 - Tictactoe
 # Author
-[Fabien RAKOTOMAMPIANDRA](https://github.com/FabienNeibaf)
+[Fabien RAKOTOMAMPIANDRA](https://github.com/FabienNeibaf)  
+Email: fabienrakotomampiandra@gmail.com
 # Follow me
 - [LinkedIn](https://www.linkedin.com/in/fabien-rakotomampiandra-96567b17b/)
 - [AngelList](https://angel.co/fabien-rakotomampiandra)
