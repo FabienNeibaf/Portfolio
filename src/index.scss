@@ -30,10 +30,6 @@ ul {
   list-style: none;
 }
 
-::placeholder {
-  color: #8184a5;
-}
-
 .title {
   color: #080d3c;
   font-size: 1.5em;
@@ -246,7 +242,7 @@ ul {
 
 #Projects {
   min-height: 100vh;
-  background: #a9b7ee;
+  background: #0f161e;
   border-bottom: 1px solid transparent;
 
   ul {
@@ -257,24 +253,29 @@ ul {
 
   .title {
     margin: 0;
+    color: #fff;
+    padding-top: 5%;
   }
 
   .item {
-    margin: 2%;
+    margin: 5% 2%;
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     border-radius: 2px;
     align-items: center;
-    background: #f5f9ff;
+    background: #181e28;
+    border: 1px dashed #444;
 
     @media (max-width: 750px) {
       padding: 10px 0;
       flex-direction: column;
     }
 
-    >* {
-      flex: auto;
-      max-width: 50%;
+    img,
+    .info {
+      padding: 1%;
+      max-width: calc(50% - 0.5px);
     }
 
     img {
@@ -296,6 +297,11 @@ ul {
         height: 50vw;
         min-width: 98%;
       }
+    }
+
+    .separator {
+      align-self: stretch;
+      border-left: 1px dashed #444;
     }
 
     .info {
@@ -367,13 +373,13 @@ ul {
 
 #Contact {
   padding: 20px;
-  color: #ece9ff;
+  color: #fff;
   position: relative;
   background: #070815;
   min-height: calc(100vh - 150px);
 
   .title {
-    color: #ece9ff;
+    color: #fff;
   }
 
   form {
@@ -392,12 +398,12 @@ ul {
 
       input,
       textarea {
-        color: #ece9ff;
+        color: #fff;
         padding: 10px;
         font-size: 0.9em;
         border-radius: 2px;
         background: inherit;
-        border: 1px solid #ece9ff;
+        border: 1px dashed #555;
       }
 
       textarea {
@@ -409,7 +415,7 @@ ul {
     button {
       width: 200px;
       margin: auto;
-      color: #ece9ff;
+      color: #fff;
       display: block;
       max-width: 90%;
       cursor: pointer;
@@ -417,11 +423,16 @@ ul {
       padding: 5px 10px;
       border-radius: 2px;
       background: inherit;
-      border: 1px solid #ece9ff;
+      border: 1px dashed #555;
+
+      &:hover {
+        border: none;
+        background: #0f161e;
+      }
 
       &:active {
         color: #000;
-        background: #ece9ff;
+        background: #fff;
       }
     }
   }

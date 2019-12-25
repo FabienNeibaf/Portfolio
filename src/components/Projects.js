@@ -62,6 +62,7 @@ const list = [
 const Item = ({ item }) => (
   <li className="item">
     {(item.id % 2 !== 0) ? <img src={item.img} alt="" /> : ''}
+    {(item.id % 2 !== 0) ? <div className="separator" /> : ''}
     <div className="info">
       <p>{item.description}</p>
       <div className="tech">
@@ -76,6 +77,7 @@ const Item = ({ item }) => (
         </a>
       </div>
     </div>
+    {(item.id % 2 === 0) ? <div className="separator" /> : ''}
     {(item.id % 2 === 0) ? <img src={item.img} alt="" /> : ''}
   </li>
 );
