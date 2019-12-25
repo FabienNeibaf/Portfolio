@@ -275,6 +275,7 @@ ul {
     img,
     .info {
       padding: 1%;
+      min-width: calc(50% - 0.5px);
       max-width: calc(50% - 0.5px);
     }
 
