@@ -4,6 +4,7 @@ module.exports = {
   entry: './src/index.js',
   devServer: {
     contentBase: './dist',
+    hot: true,
   },
   module: {
     rules: [
