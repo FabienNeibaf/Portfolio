@@ -10,7 +10,7 @@ const Vitrine = () => (
           About
         </h2>
         <p className="name">
-          > Fabien RAKOTOMAMPIANDRA
+          &gt; Fabien RAKOTOMAMPIANDRA
         </p>
         <p>
           Full-stack web developer with a strong analytical background and 03 years of experience
@@ -23,7 +23,7 @@ const Vitrine = () => (
           Love to solve problems and challenge himself.
         </p>
         <p>
-          Pursued a legal study and have a Bachelor in public administration.
+          Pursued a legal study and have a Bachelor in Public Law.
         </p>
       </div>
       <div className="separator" />

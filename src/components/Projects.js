@@ -3,12 +3,21 @@ import PropTypes from 'prop-types';
 import tada from '../images/Tada.png';
 import Github from '../images/github.svg';
 import weather from '../images/Weather.png';
+import calculata from '../images/Calculata.png';
 import dashboard from '../images/Dashboard.png';
 import tictactoe from '../images/TicTacToe.png';
 import battleship from '../images/Battleship.png';
 import earthdiary from '../images/Earthdiary.png';
 
 const list = [
+  {
+    id: 0,
+    img: calculata,
+    demo: 'https://calculata.herokuapp.com/',
+    github: 'https://github.com/FabienNeibaf/Calculator',
+    description: "It's a parser based calculator. You can type any mathematical valid expressions.",
+    technologies: ['Javascript', 'HTML5', 'CSS3', 'Parser'],
+  },
   {
     id: 1,
     img: battleship,
