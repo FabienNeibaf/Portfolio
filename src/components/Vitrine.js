@@ -1,6 +1,32 @@
 import React from 'react';
 import avatar from '../images/avatar.jpg';
 
+const skills = [
+  'JavaScript',
+  'HTML5',
+  'CSS3',
+  'React',
+  'Angular',
+  'Java',
+  'JavaFX',
+  'Spring',
+  'Androïd',
+  'Ruby on Rails',
+  'SQLite',
+  'PostgreSQL',
+  'MongoDB',
+  'PHP',
+  'Laravel',
+  'Statistics',
+  'Data visualization',
+  'Data Collect',
+  'Python',
+  'R',
+  'Windows',
+  'Linux',
+  'Parser',
+];
+
 const Vitrine = () => (
   <section id="Vitrine">
     <img src={avatar} alt="avatar" />
@@ -32,28 +58,7 @@ const Vitrine = () => (
           Skills
         </h2>
         <div className="skills">
-          <span>JavaScript</span>
-          <span>Java</span>
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>Ruby on Rails</span>
-          <span>React</span>
-          <span>SQLite</span>
-          <span>PostgreSQL</span>
-          <span>Spring</span>
-          <span>Laravel</span>
-          <span>Angular</span>
-          <span>MongoDB</span>
-          <span>Statistics</span>
-          <span>R</span>
-          <span>Python</span>
-          <span>Parser</span>
-          <span>JavaFX</span>
-          <span>Androïd</span>
-          <span>Data visualization</span>
-          <span>Data Collect</span>
-          <span>Linux</span>
-          <span>Windows</span>
+          {skills.map((skill) => <span key={skill}>{skill}</span>)}
         </div>
       </div>
     </main>

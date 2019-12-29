@@ -6,7 +6,7 @@ import Contact from './Contact';
 import Projects from './Projects';
 
 const App = () => (
-  <div>
+  <div id="App">
     <Header />
     <Vitrine />
     <Projects />

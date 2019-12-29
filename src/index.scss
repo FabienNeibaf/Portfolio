@@ -45,6 +45,11 @@ ul {
   font-size: 0.8em;
 }
 
+#App {
+  overflow: auto;
+  max-height: 100vh;
+}
+
 #Header {
   color: #fff;
   height: 170px;

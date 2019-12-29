@@ -76,7 +76,7 @@ const Item = ({ item }) => (
       <p>{item.description}</p>
       <div className="tech">
         <h3>Technologies</h3>
-        <ul>{item.technologies.map((tech) => <li>{tech}</li>)}</ul>
+        <ul>{item.technologies.map((tech) => <li key={tech}>{tech}</li>)}</ul>
       </div>
       <div className="external">
         <a href={item.demo} target="_blank" rel="noopener noreferrer">Live demo</a>
