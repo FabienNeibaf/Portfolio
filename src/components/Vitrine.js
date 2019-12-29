@@ -1,5 +1,4 @@
 import React from 'react';
-import avatar from '../images/avatar.jpg';
 
 const skills = [
   'JavaScript',
@@ -29,8 +28,7 @@ const skills = [
 
 const Vitrine = () => (
   <section id="Vitrine">
-    <img src={avatar} alt="avatar" />
-    <main className="about">
+    <div className="about">
       <div className="card">
         <h2 className="title">
           About
@@ -52,16 +50,18 @@ const Vitrine = () => (
           Pursued a legal study and have a Bachelor in Public Law.
         </p>
       </div>
-      <div className="separator" />
+    </div>
+    <div className="separator" />
+    <div className="skills">
       <div className="card">
         <h2 className="title">
           Skills
         </h2>
-        <div className="skills">
-          {skills.map((skill) => <span key={skill}>{skill}</span>)}
-        </div>
+        <ul>
+          {skills.map((skill) => <li key={skill}>{skill}</li>)}
+        </ul>
       </div>
-    </main>
+    </div>
   </section>
 );
 

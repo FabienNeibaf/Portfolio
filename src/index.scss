@@ -51,23 +51,18 @@ ul {
 }
 
 #Header {
+  width: 100%;
   color: #fff;
-  height: 170px;
+  height: 12vw;
   padding: 10px;
   display: flex;
+  z-index: 1000;
+  position: fixed;
+  min-height: 60px;
   align-items: center;
-  background: #181e28;
+  background: #1e262d;
   justify-content: center;
   border-bottom: 1px dashed #444;
-
-  @media (max-width: 1250px) {
-    height: 150px;
-  }
-
-  @media (max-width: 600px) {
-    height: 100px;
-    align-items: flex-start;
-  }
 
   .brand {
     width: 25%;
@@ -82,6 +77,10 @@ ul {
 
     @media (max-width: 600px) {
       font-size: 1.5em;
+    }
+
+    @media (max-width: 500px) {
+      text-align: left;
     }
   }
 
@@ -111,136 +110,138 @@ ul {
       }
     }
   }
-}
-
-#Vitrine {
-  padding-top: 85px;
-  position: relative;
-  background: #181e28;
-  min-height: calc(100vh - 170px);
-
-  @media (max-width: 1250px) {
-    padding-top: 68px;
-    min-height: calc(100vh - 150px);
-  }
-
-  @media (max-width: 600px) {
-    padding-top: 50px;
-    min-height: calc(100vh - 100px);
-  }
 
   img {
     left: 0;
     right: 0;
-    top: -105px;
-    z-index: 2;
+    width: 15vw;
+    height: 15vw;
+    bottom: calc(-15vw / 2);
     margin: auto;
-    width: 200px;
-    height: 200px;
+    padding: 2px;
     position: absolute;
     border-radius: 50%;
-    background: #f7f7f7;
+    background: inherit;
+    border: 1px dashed #777;
 
-    @media (max-width: 1250px) {
-      top: -85px;
-      width: 160px;
-      height: 160px;
+    @media (max-width: 500px) {
+      min-width: 40px;
+      max-width: 40px;
+      min-height: 40px;
+      max-height: 40px;
+      position: unset;
+    }
+  }
+}
+
+#Vitrine {
+  display: flex;
+  margin-top: 12vw;
+  background: #181e28;
+  min-height: calc(100vh - 12vw);
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+
+  .about,
+  .skills {
+    flex: 1;
+    min-width: 49%;
+    padding: 7.5vw 5% 5%;
+
+    @media (max-width: 400px) {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+  }
+
+  .card {
+    color: #fff;
+    height: 100%;
+    border-radius: 5px;
+    background: #1e262d;
+    border: 1px dashed #444;
+
+    @media (max-width: 850px) {
+      width: 98%;
+      margin: auto;
+      max-width: 600px;
     }
 
-    @media (max-width: 1000px) {
-      top: -75px;
-      width: 140px;
-      height: 140px;
+    .title {
+      padding: 10px;
+      color: inherit;
+      border-bottom: 1px dashed #444;
     }
 
-    @media (max-width: 600px) {
-      top: -55px;
-      width: 100px;
-      height: 100px;
+    p {
+      margin: 10px;
+      padding: 5px 20px;
+
+      @media (max-width: 500px) {
+        padding: 5px;
+      }
+
+      &.name {
+        color: #e7ee11;
+        font-size: 1.1em;
+        font-weight: 700;
+        font-family: Charmonman;
+      }
     }
   }
 
   .about {
-    display: flex;
-    min-height: calc(100vh - 255px);
-
-    @media (max-width: 1250px) {
-      min-height: calc(100vh - 220px);
-    }
-
     @media (max-width: 850px) {
-      align-items: center;
-      flex-direction: column;
+      padding-top: 10vw;
+      padding-bottom: 0;
     }
 
-    .card {
-      flex: 1;
-      color: #fff;
-      margin: 0 5% 5%;
-      min-width: 40%;
-      border-radius: 5px;
-      background: #1e262d;
-      border: 1px dashed #444;
-
-      @media (max-width: 850px) {
-        width: 95%;
-        max-width: 600px;
-        margin: 20px auto;
-      }
-
-      .title {
-        padding: 10px;
-        color: inherit;
-        border-bottom: 1px dashed #444;
-      }
-
-      p {
-        margin: 10px;
-        padding: 5px 20px;
-
-        &.name {
-          color: #e7ee11;
-          font-size: 1.1em;
-          font-weight: 700;
-          font-family: Charmonman;
-        }
-      }
-
-      .skills {
-        padding: 20px;
-
-        >span {
-          margin: 5px;
-          color: #fff;
-          padding: 3px 10px;
-          border-radius: 20px;
-          display: inline-block;
-          background: #1a3bbd;
-        }
-      }
+    @media (max-width: 400px) {
+      padding-top: 45px;
     }
+  }
 
-    .separator {
-      border-right: 1px dashed #444;
-    }
-
-    .title {
-      margin: 0;
-
-      @media (max-width: 950px) {
-        font-size: 1.7em;
-      }
+  .skills {
+    ul {
+      padding: 20px;
 
       @media (max-width: 500px) {
-        font-size: 1.4em;
+        padding: 10px 5px;
+      }
+
+      >li {
+        margin: 5px;
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 20px;
+        display: inline-block;
+        background: #1a3bbd;
       }
     }
+  }
 
-    p {
+  .separator {
+    border-right: 1px dashed #444;
+  }
 
-      @media (max-width: 500px) {
-        font-size: 1em;
-      }
+  .title {
+    margin: 0;
+
+    @media (max-width: 950px) {
+      font-size: 1.7em;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.4em;
+    }
+  }
+
+  p {
+
+    @media (max-width: 500px) {
+      font-size: 1em;
     }
   }
 }
