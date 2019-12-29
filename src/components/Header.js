@@ -5,6 +5,7 @@ import avatar from '../images/avatar.jpg';
 window.addEventListener('load', () => {
   const app = document.getElementById('App');
   const header = document.getElementById('Header');
+  const vitrine = document.getElementById('Vitrine');
   const photo = header.getElementsByTagName('img')[0];
 
   let photoWidth = photo.offsetWidth;
@@ -19,6 +20,7 @@ window.addEventListener('load', () => {
       photo.style.bottom = `${-photoDim / 2}px`;
     }
     header.style.height = `${Math.max(60, headerHeight - app.scrollTop)}px`;
+    vitrine.style.marginTop = header.style.height;
   });
 
   window.addEventListener('resize', () => {
@@ -31,6 +33,7 @@ window.addEventListener('load', () => {
     header.style.height = '12vw';
     headerHeight = header.offsetHeight;
     header.style.width = `${app.clientWidth}px`;
+    vitrine.style.marginTop = header.style.height;
   });
 });
 
