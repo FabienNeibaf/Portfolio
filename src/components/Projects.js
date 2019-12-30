@@ -55,7 +55,7 @@ const list = [
     img: weather,
     demo: 'https://fabienneibaf.github.io/Weather-App/',
     github: 'https://github.com/FabienNeibaf/Weather-App',
-    description: 'Get the forecast for a location of your choice buy searching it through the search box.',
+    description: 'Get the forecast for a location of your choice buy searching it through the search box. By default it looks up your location and if available use it to deliver your current forecast.',
     technologies: ['Javascript', 'HTML5', 'CSS3', 'REST/API'],
   },
   {
