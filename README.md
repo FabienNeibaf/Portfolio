@@ -9,8 +9,8 @@ Currently, I'm starting to build mobile app.
 
 # Projects
 - Calculata
-  - [Live demo]('https://calculata.herokuapp.com/')
-  - [Source Code]('https://github.com/FabienNeibaf/Calculator')
+  - [Live demo](https://calculata.herokuapp.com/)
+  - [Source Code](https://github.com/FabienNeibaf/Calculator)
 - Battleship
   - [Live demo]('https://fabienneibaf.github.io/Battleship/')
   - [Source Code]('https://github.com/FabienNeibaf/Battleship')
