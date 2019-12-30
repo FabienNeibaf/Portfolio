@@ -1,26 +1,35 @@
 # About me
-I'm software engineer with a strong analytical and legal background.  
+I'm software engineer with a strong analytical.  
 I studied computer science and mathematics as well public law.  
 I have Bachelors' degree for both and completed all the theoritical courses for the Master in Mathematics and Computer Science curriculum.  
 I have more than 3 years experience on building desktop and web applications.  
 Currently, I'm starting to build mobile app.
 
+![Portfolio](src/images/Portfolio.png)
+
 # Projects
-- Earthdiary
-  - [Live demo]()
-  - [Source Code]()
-- Battleship
-  - [Live demo]()
-  - [Source Code]()
-- TodoList
-  - [Live demo]()
-  - [Source Code]()
 - Calculata
-  - [Live demo]()
-  - [Source Code]()
+  - [Live demo]('https://calculata.herokuapp.com/')
+  - [Source Code]('https://github.com/FabienNeibaf/Calculator')
+- Battleship
+  - [Live demo]('https://fabienneibaf.github.io/Battleship/')
+  - [Source Code]('https://github.com/FabienNeibaf/Battleship')
+- Earthdiary
+  - [Live demo]('https://earthdiary.herokuapp.com/')
+  - [Source Code]('https://github.com/maelfosso/microverse_ror_final_project')
+- Tada
+  - [Live demo]('https://fabienneibaf.github.io/TodoList/')
+  - [Source Code]('https://github.com/FabienNeibaf/TodoList')
 - Tictactoe
-  - [Live demo]()
-  - [Source Code]()
+  - [Live demo]('https://fabienneibaf.github.io/TicTacToe/')
+  - [Source Code]('https://github.com/FabienNeibaf/TicTacToe')
+- Weather
+  - [Live demo]('https://fabienneibaf.github.io/Weather-App/')
+  - [Source Code]('https://github.com/FabienNeibaf/Weather-App')
+- Dashboard
+  - [Live demo]('https://fabienneibaf.github.io/Dashboard/)
+  - [Source Code]('https://github.com/FabienNeibaf/Dashboard')
+
 
 # Author
 - Github: https://github.com/FabienNeibaf

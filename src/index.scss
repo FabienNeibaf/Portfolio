@@ -268,14 +268,20 @@ ul {
   }
 
   .item {
-    margin: 5% 2%;
+    opacity: 0;
     color: #fff;
+    margin: 5% 2%;
     display: flex;
     flex-wrap: wrap;
     border-radius: 2px;
     align-items: center;
     background: #181e28;
     border: 1px dashed #444;
+    transition: opacity ease-in-out 1s;
+
+    &.show {
+      opacity: 1;
+    }
 
     @media (max-width: 750px) {
       padding: 10px 0;
