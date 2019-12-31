@@ -10,27 +10,27 @@ const Footer = () => (
   <footer id="Footer">
     <ul>
       <li>
-        <a href="https://twitter.com/Neibaflintone">
+        <a href="https://twitter.com/Neibaflintone" target="_blank" rel="noopener noreferrer">
           <Twitter />
         </a>
       </li>
       <li>
-        <a href="https://angel.co/fabien-rakotomampiandra">
+        <a href="https://angel.co/fabien-rakotomampiandra" target="_blank" rel="noopener noreferrer">
           <Angel />
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/fabien-rakotomampiandra-96567b17b/">
+        <a href="https://www.linkedin.com/in/fabien-rakotomampiandra-96567b17b/" target="_blank" rel="noopener noreferrer">
           <LinkedIn />
         </a>
       </li>
       <li>
-        <a href="https://www.facebook.com/fabien.mampiandra.7">
+        <a href="https://www.facebook.com/fabien.mampiandra.7" target="_blank" rel="noopener noreferrer">
           <Facebook />
         </a>
       </li>
       <li>
-        <a href="https://github.com/FabienNeibaf">
+        <a href="https://github.com/FabienNeibaf" target="_blank" rel="noopener noreferrer">
           <Github />
         </a>
       </li>

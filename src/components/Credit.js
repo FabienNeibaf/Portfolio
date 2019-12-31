@@ -7,7 +7,7 @@ const Credit = () => (
       <a href="https://fonts.google.com/">GoogleFonts</a>
     </div>
     <div>
-      AngelList icon by
+      AngelList and Connect icons by
       <a href="https://icons8.com">Icons8</a>
     </div>
     <div>

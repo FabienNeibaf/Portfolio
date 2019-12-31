@@ -1,12 +1,18 @@
 import React from 'react';
 import avatar from '../images/avatar.jpg';
+import Angel from '../images/angel.svg';
+import Github from '../images/github.svg';
+import Twitter from '../images/twitter.svg';
+import Connect from '../images/connect.svg';
+import Facebook from '../images/facebook.svg';
+import LinkedIn from '../images/linkedin.svg';
 
 
 window.addEventListener('load', () => {
   const app = document.getElementById('App');
+  const photo = document.getElementById('avatar');
   const header = document.getElementById('Header');
   const vitrine = document.getElementById('Vitrine');
-  const photo = header.getElementsByTagName('img')[0];
 
   let photoWidth = photo.offsetWidth;
   let headerHeight = header.offsetHeight;
@@ -82,7 +88,39 @@ const handleClick = (e) => {
 
 const Header = () => (
   <header id="Header">
-    <img src={avatar} alt="avatar" />
+    <div id="avatar">
+      <img src={avatar} alt="avatar" />
+      <ul>
+        <li>
+          <a href="https://twitter.com/Neibaflintone" target="_blank" rel="noopener noreferrer">
+            <Twitter />
+          </a>
+        </li>
+        <li>
+          <a href="https://angel.co/fabien-rakotomampiandra" target="_blank" rel="noopener noreferrer">
+            <Angel />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/fabien-rakotomampiandra-96567b17b/" target="_blank" rel="noopener noreferrer">
+            <LinkedIn />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/fabien.mampiandra.7" target="_blank" rel="noopener noreferrer">
+            <Facebook />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/FabienNeibaf" target="_blank" rel="noopener noreferrer">
+            <Github />
+          </a>
+        </li>
+        <li className="toggle">
+          <Connect />
+        </li>
+      </ul>
+    </div>
     <h1 className="brand">FR</h1>
     <ul className="nav">
       <li><a href="#Vitrine" onClick={handleClick}>About</a></li>

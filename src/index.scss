@@ -110,26 +110,99 @@ ul {
       }
     }
   }
+}
+
+#avatar {
+  left: 0;
+  right: 0;
+  width: 15vw;
+  height: 15vw;
+  bottom: calc(-15vw / 2);
+  margin: auto;
+  padding: 2px;
+  position: absolute;
+
+  @media (max-width: 500px) {
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    position: unset;
+  }
 
   img {
-    left: 0;
-    right: 0;
-    width: 15vw;
-    height: 15vw;
-    bottom: calc(-15vw / 2);
-    margin: auto;
-    padding: 2px;
-    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background: inherit;
     border: 1px dashed #777;
+  }
+
+  ul {
+    width: 50px;
+    margin: auto;
+    margin-top: -25px;
+    padding-top: 15px;
+    text-align: center;
+    background: #141c24;
+    border: 1px dashed #444;
+    border-top: none;
+    border-radius: 0 0 30px 30px;
 
     @media (max-width: 500px) {
-      min-width: 40px;
-      max-width: 40px;
-      min-height: 40px;
-      max-height: 40px;
-      position: unset;
+      width: 32px;
+    }
+
+    &:hover {
+      margin-top: -15px;
+
+      li {
+        opacity: 1;
+        height: 40px;
+      }
+    }
+
+    li {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all ease-out 0.5s;
+
+      a {
+        display: block;
+        padding: 5px 12px;
+
+        @media (max-width: 500px) {
+          padding: 4px;
+        }
+
+        &:hover {
+          svg {
+            fill: #d0d3ff;
+
+            &.angel_svg__angel path:last-child {
+              fill: #d0d3ff;
+            }
+          }
+        }
+
+        svg {
+          fill: #9fa4ff;
+        }
+      }
+
+      &.toggle {
+        opacity: 1;
+        height: auto;
+        padding: 7px 0 0;
+        background: #181e28;
+        border-radius: 0 0 30px 30px;
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
     }
   }
 }
@@ -470,7 +543,7 @@ ul {
 }
 
 #Footer {
-  padding: 5px;
+  padding: 20px 5px;
   display: flex;
   color: #ece9ff;
   min-height: 150px;
@@ -514,16 +587,20 @@ ul {
 
   div:nth-child(2) {
     display: flex;
+    white-space: nowrap;
     align-items: center;
 
-    &:before,
-    &:after {
-      content: "";
-      width: 5px;
-      height: 5px;
-      margin: 0 7px 0 5px;
-      border-radius: 50%;
-      background: #dcffc4;
+    @media (min-width: 701px) {
+
+      &:before,
+      &:after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        margin: 0 7px 0 5px;
+        border-radius: 50%;
+        background: #dcffc4;
+      }
     }
   }
 
@@ -531,7 +608,7 @@ ul {
     text-decoration: underline;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     font-size: 0.9em;
     flex-direction: column;
   }
