@@ -7,16 +7,30 @@ import Connect from '../images/connect.svg';
 import Facebook from '../images/facebook.svg';
 import LinkedIn from '../images/linkedin.svg';
 
+const run = (element) => {
+  element.classList.add('run');
+  setTimeout(() => {
+    element.classList.remove('run');
+  }, 5000);
+};
 
 window.addEventListener('load', () => {
   const app = document.getElementById('App');
   const photo = document.getElementById('avatar');
   const header = document.getElementById('Header');
   const vitrine = document.getElementById('Vitrine');
+  const toggler = document.querySelector('#avatar .toggle');
+  const animate = toggler.querySelector('.animate');
 
   let photoWidth = photo.offsetWidth;
   let headerHeight = header.offsetHeight;
   header.style.width = `${app.clientWidth}px`;
+
+  run(animate);
+
+  toggler.addEventListener('mouseenter', () => {
+    run(animate);
+  });
 
   app.addEventListener('scroll', () => {
     requestAnimationFrame(() => {
@@ -117,7 +131,7 @@ const Header = () => (
           </a>
         </li>
         <li className="toggle">
-          <Connect />
+          <span className="animate"><Connect /></span>
         </li>
       </ul>
     </div>

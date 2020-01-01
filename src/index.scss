@@ -194,17 +194,30 @@ ul {
       &.toggle {
         opacity: 1;
         height: auto;
-        padding: 7px 0 0;
+        padding: 8px 0 1px;
+        text-align: center;
         background: #181e28;
         border-radius: 0 0 30px 30px;
 
-        svg {
-          width: 22px;
-          height: 22px;
+        .animate {
+          width: 25px;
+          height: 25px;
+          display: inline-block;
           animation-name: rotate;
           animation-duration: 1s;
+          animation-play-state: paused;
           animation-timing-function: linear;
           animation-iteration-count: infinite;
+
+          &.run {
+            animation-play-state: running;
+          }
+
+          svg {
+            width: 25px;
+            height: 25px;
+            transform: translateX(-1px);
+          }
 
           @keyframes rotate {
             from {
