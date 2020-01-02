@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 import Header from './Header';
 import Footer from './Footer';
 import Vitrine from './Vitrine';
 import Contact from './Contact';
 import Projects from './Projects';
 
-const App = () => (
-  <div id="App">
+const mapStateToProps = (state) => ({ theme: state });
+
+const App = ({ theme }) => (
+  <div id="App" className={theme}>
     <Header />
     <Vitrine />
     <Projects />
@@ -15,4 +20,8 @@ const App = () => (
   </div>
 );
 
-export default App;
+App.propTypes = {
+  theme: PropTypes.string.isRequired,
+};
+
+export default connect(mapStateToProps)(App);

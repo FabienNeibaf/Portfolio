@@ -1,6 +1,13 @@
 import React from 'react';
-import avatar from '../images/avatar.jpg';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import { toggleTheme } from '../store';
+
+import sun from '../images/sun2.png';
+import moon from '../images/moon.png';
 import Angel from '../images/angel.svg';
+import avatar from '../images/avatar.jpg';
 import Github from '../images/github.svg';
 import Twitter from '../images/twitter.svg';
 import Connect from '../images/connect.svg';
@@ -9,7 +16,7 @@ import LinkedIn from '../images/linkedin.svg';
 
 const run = (element) => {
   element.classList.add('run');
-  setTimeout(() => {
+  return setTimeout(() => {
     element.classList.remove('run');
   }, 5000);
 };
@@ -22,14 +29,16 @@ window.addEventListener('load', () => {
   const toggler = document.querySelector('#avatar .toggle');
   const animate = toggler.querySelector('.animate');
 
+  let timeout;
   let photoWidth = photo.offsetWidth;
   let headerHeight = header.offsetHeight;
   header.style.width = `${app.clientWidth}px`;
 
-  run(animate);
+  timeout = run(animate);
 
   toggler.addEventListener('mouseenter', () => {
-    run(animate);
+    clearTimeout(timeout);
+    timeout = run(animate);
   });
 
   app.addEventListener('scroll', () => {
@@ -100,8 +109,14 @@ const handleClick = (e) => {
   scroll(app, target.offsetTop);
 };
 
-const Header = () => (
-  <header id="Header">
+const mapStateToProps = (state) => ({ theme: state });
+
+const mapDispatchToProps = (dispatch) => ({
+  toggleThemeHandler: (theme) => dispatch(toggleTheme(theme)),
+});
+
+const Header = ({ theme, toggleThemeHandler }) => (
+  <header id="Header" className={theme}>
     <div id="avatar">
       <img src={avatar} alt="avatar" />
       <ul>
@@ -137,11 +152,26 @@ const Header = () => (
     </div>
     <h1 className="brand">FR</h1>
     <ul className="nav">
-      <li><a href="#Vitrine" onClick={handleClick}>About</a></li>
-      <li><a href="#Projects" onClick={handleClick}>Projects</a></li>
-      <li><a href="#Contact" onClick={handleClick}>Contact</a></li>
+      <div className="jump">
+        <button type="button">Menu</button>
+        <div>
+          <li><a href="#Vitrine" onClick={handleClick}>About</a></li>
+          <li><a href="#Projects" onClick={handleClick}>Projects</a></li>
+          <li><a href="#Contact" onClick={handleClick}>Contact</a></li>
+        </div>
+      </div>
+      <li className="theme">
+        <button type="button" onClick={() => toggleThemeHandler(theme)}>
+          <img src={theme === 'dark' ? sun : moon} alt="" />
+        </button>
+      </li>
     </ul>
   </header>
 );
 
-export default Header;
+Header.propTypes = {
+  theme: PropTypes.string.isRequired,
+  toggleThemeHandler: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
