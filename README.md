@@ -2,7 +2,7 @@
 I'm software engineer with a strong analytical.  
 I studied computer science and mathematics as well public law.  
 I have Bachelors' degree for both and completed all the theoritical courses for the Master in Mathematics and Computer Science curriculum.  
-I have more than 3 years experience on building desktop and web applications.  
+I have more than 03 years experience on building desktop and web applications.  
 Currently, I'm starting to build mobile app.
 
 ![Portfolio](src/images/Portfolio.png)
