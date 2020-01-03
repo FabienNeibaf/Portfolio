@@ -31,7 +31,6 @@ ul {
 }
 
 .title {
-  color: #080d3c;
   font-size: 1.5em;
   margin-top: 10px;
   text-align: center;
@@ -48,21 +47,292 @@ ul {
 #App {
   overflow: auto;
   max-height: 100vh;
+
+  // THEME
+  .skills {
+    ul>li {
+      color: #fff;
+      background: #1a3bbd;
+    }
+  }
+
+  .jump>div {
+    @media (max-width: 300px) {
+      border: 1px dashed transparent;
+    }
+  }
+
+  #avatar {
+    ul {
+      background: #141c24;
+      border: 1px dashed #444;
+
+      li {
+
+        a {
+
+          &:hover {
+            svg {
+              fill: #d0d3ff;
+
+              &.angel_svg__angel path:last-child {
+                fill: #d0d3ff;
+              }
+            }
+          }
+
+          svg {
+            fill: #9fa4ff;
+          }
+        }
+
+        &.toggle {
+          background: #181e28;
+        }
+      }
+    }
+  }
+
+  #Contact {
+    color: #fff;
+
+    form {
+
+      label {
+
+        input,
+        textarea {
+          color: #fff;
+          border: 1px dashed #555;
+        }
+      }
+
+      button {
+        color: #fff;
+        border: 1px dashed #555;
+
+        &:hover {
+          background: #0f161e;
+        }
+
+        &:active {
+          color: #000;
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  #Footer {
+    color: #fff;
+
+    ul li a svg {
+      fill: #9fa4ff;
+
+      &:hover {
+        fill: #d0d3ff;
+      }
+
+      &.angel_svg__angel:hover path:last-child {
+        fill: #d0d3ff;
+      }
+    }
+  }
+
+  #Credit div:nth-child(2) {
+    @media (min-width: 701px) {
+
+      &:before,
+      &:after {
+        background: #dcffc4;
+      }
+    }
+  }
+
+  &.dark {
+    #Header {
+      background: #141c24;
+      border-bottom: 1px dashed #444;
+
+      * {
+        color: #fff;
+      }
+
+      .nav li:hover {
+        border-bottom-color: #fff;
+      }
+
+      .jump>div {
+        background: #141c24;
+
+        @media (max-width: 300px) {
+          border-color: transparent #444 #444;
+        }
+      }
+
+      .theme button:active img {
+        background: #eef1ff;
+      }
+    }
+
+    #avatar img {
+      border: 1px dashed #777;
+    }
+
+    #Vitrine {
+      color: #fff;
+      background: #181e28;
+
+      .card {
+        background: #141c24;
+        border: 1px dashed #444;
+
+        .title {
+          border-bottom: 1px dashed #444;
+        }
+
+        .name {
+          color: #e7ee11;
+        }
+      }
+
+      .separator {
+        border-right: 1px dashed #444;
+      }
+    }
+
+    #Projects {
+      color: #fff;
+      background: #0f161e;
+
+      .item {
+        background: #181e28;
+        border: 1px dashed #444;
+
+        .info {
+          .tech li {
+            background: #1a3bbd;
+          }
+
+          .external a {
+            color: #000;
+            background: #d0d3ff;
+          }
+        }
+
+        .separator {
+          border-right: 1px dashed #444;
+        }
+      }
+    }
+
+    #Contact {
+      background: #070815;
+    }
+
+    #Footer {
+      background: #070911;
+    }
+  }
+
+  &.light {
+    #Header {
+      background: #eef1ff;
+      border-bottom: 1px dashed #000;
+
+      * {
+        color: #000;
+      }
+
+      .nav li:hover {
+        border-bottom-color: #000;
+      }
+
+      .jump>div {
+        background: #eef1ff;
+
+        @media (max-width: 300px) {
+          border-color: transparent #000 #000;
+        }
+      }
+
+      .theme button:active img {
+        background: #141c24;
+      }
+    }
+
+    #avatar img {
+      border: 1px dashed #000;
+    }
+
+    #Vitrine {
+      background: #f5f7ff;
+
+      .card {
+        background: #eef1ff;
+        border: 1px dashed #000;
+
+        .title {
+          border-bottom: 1px dashed #000;
+        }
+
+        .name {
+          color: #847d10;
+        }
+      }
+
+      .separator {
+        border-right: 1px dashed #000;
+      }
+    }
+
+    #Projects {
+      color: #000;
+      background: #dde3ff;
+
+      .item {
+        background: #192131;
+
+        .info {
+          color: #fff;
+
+          .tech li {
+            background: #1a3bbd;
+          }
+
+          .external a {
+            color: #000;
+            background: #d0d3ff;
+          }
+        }
+
+        .separator {
+          border-right: 1px dashed #555;
+        }
+      }
+    }
+
+    #Contact {
+      background: #192131;
+    }
+
+    #Footer {
+      background: #141826;
+    }
+  }
 }
 
+// GENERAL
 #Header {
   width: 100%;
-  color: #fff;
   height: 12vw;
-  padding: 10px;
   display: flex;
   z-index: 1000;
+  padding: 0 5px;
   position: fixed;
   min-height: 60px;
   align-items: center;
-  background: #141c24;
   justify-content: center;
-  border-bottom: 1px dashed #444;
 
   .brand {
     width: 25%;
@@ -87,10 +357,64 @@ ul {
   .nav {
     width: 50%;
     display: flex;
+    padding: 0 5px;
+    min-height: 100%;
+    align-items: center;
     justify-content: flex-end;
 
     @media (max-width: 850px) {
       width: 75%;
+    }
+
+    .jump {
+      display: flex;
+      min-height: 60px;
+      position: relative;
+      background: inherit;
+      align-items: center;
+
+
+      @media (max-width: 300px) {
+        &:hover>div {
+          display: block;
+        }
+      }
+
+      >div {
+        display: flex;
+        padding: 0 7px;
+
+        @media (max-width: 300px) {
+          left: 0;
+          display: none;
+          position: absolute;
+          top: calc(100% - 1px);
+        }
+
+        li {
+          @media (max-width: 300px) {
+            border-bottom-width: 1px;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      button {
+        height: 100%;
+        border: none;
+        display: none;
+        background: none;
+        font-weight: 700;
+        padding: 5px 10px;
+
+        @media (max-width: 300px) {
+          display: block;
+        }
+
+        &:active {
+          padding: 5px 10px;
+        }
+      }
     }
 
     li {
@@ -98,15 +422,27 @@ ul {
       border-bottom: 2px solid transparent;
 
       a {
-        color: #fff;
         display: block;
         padding: 5px 1vw;
         font-weight: 700;
         text-decoration: none;
       }
 
-      &:hover {
-        border-bottom-color: #fff;
+      &.theme button {
+        border: none;
+        cursor: pointer;
+        padding: 5px 0 0;
+        background: none;
+
+        &:active {
+          padding: 5px 0 0;
+        }
+
+        img {
+          width: 2em;
+          height: 2em;
+          border-radius: 50%;
+        }
       }
     }
   }
@@ -132,21 +468,18 @@ ul {
 
   img {
     width: 100%;
-    height: 100%;
+    height: 97%;
     border-radius: 50%;
     background: inherit;
-    border: 1px dashed #777;
   }
 
   ul {
     width: 50px;
     margin: auto;
+    border-top: none;
     margin-top: -25px;
     padding-top: 15px;
     text-align: center;
-    background: #141c24;
-    border: 1px dashed #444;
-    border-top: none;
     border-radius: 0 0 30px 30px;
 
     @media (max-width: 500px) {
@@ -175,32 +508,48 @@ ul {
         @media (max-width: 500px) {
           padding: 4px;
         }
-
-        &:hover {
-          svg {
-            fill: #d0d3ff;
-
-            &.angel_svg__angel path:last-child {
-              fill: #d0d3ff;
-            }
-          }
-        }
-
-        svg {
-          fill: #9fa4ff;
-        }
       }
 
       &.toggle {
         opacity: 1;
         height: auto;
-        padding: 7px 0 0;
-        background: #181e28;
+        padding: 8px 0 1px;
+        text-align: center;
         border-radius: 0 0 30px 30px;
 
-        svg {
-          width: 22px;
-          height: 22px;
+        .animate {
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          animation-name: rotate;
+          animation-duration: 1s;
+          animation-play-state: paused;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+
+          @media (max-width: 500px) {
+            width: 20px;
+            height: 20px;
+          }
+
+          &.run {
+            animation-play-state: running;
+          }
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+
+          @keyframes rotate {
+            from {
+              transform: rotate(0deg);
+            }
+
+            to {
+              transform: rotate(360deg);
+            }
+          }
         }
       }
     }
@@ -210,7 +559,6 @@ ul {
 #Vitrine {
   display: flex;
   margin-top: 12vw;
-  background: #181e28;
   min-height: calc(100vh - 12vw);
 
   @media (max-width: 850px) {
@@ -234,11 +582,8 @@ ul {
   }
 
   .card {
-    color: #fff;
     height: 100%;
     border-radius: 5px;
-    background: #141c24;
-    border: 1px dashed #444;
 
     @media (max-width: 850px) {
       width: 98%;
@@ -248,8 +593,6 @@ ul {
 
     .title {
       padding: 10px;
-      color: inherit;
-      border-bottom: 1px dashed #444;
     }
 
     p {
@@ -261,7 +604,6 @@ ul {
       }
 
       &.name {
-        color: #e7ee11;
         font-size: 1.1em;
         font-weight: 700;
         font-family: Charmonman;
@@ -290,17 +632,11 @@ ul {
 
       >li {
         margin: 5px;
-        color: #fff;
         padding: 3px 10px;
         border-radius: 20px;
         display: inline-block;
-        background: #1a3bbd;
       }
     }
-  }
-
-  .separator {
-    border-right: 1px dashed #444;
   }
 
   .title {
@@ -324,6 +660,7 @@ ul {
 }
 
 #Projects {
+  color: #fff;
   min-height: 100vh;
   background: #0f161e;
   border-bottom: 1px solid transparent;
@@ -336,13 +673,11 @@ ul {
 
   .title {
     margin: 0;
-    color: #fff;
     padding-top: 5%;
   }
 
   .item {
     opacity: 0;
-    color: #fff;
     margin: 5% 2%;
     display: flex;
     flex-wrap: wrap;
@@ -391,7 +726,6 @@ ul {
 
     .separator {
       align-self: stretch;
-      border-left: 1px dashed #444;
     }
 
     .info {
@@ -463,14 +797,8 @@ ul {
 
 #Contact {
   padding: 20px;
-  color: #fff;
   position: relative;
-  background: #070815;
   min-height: calc(100vh - 150px);
-
-  .title {
-    color: #fff;
-  }
 
   form {
     margin: auto;
@@ -488,12 +816,10 @@ ul {
 
       input,
       textarea {
-        color: #fff;
         padding: 10px;
         font-size: 0.9em;
         border-radius: 2px;
         background: inherit;
-        border: 1px dashed #555;
       }
 
       textarea {
@@ -505,7 +831,6 @@ ul {
     button {
       width: 200px;
       margin: auto;
-      color: #fff;
       display: block;
       max-width: 90%;
       cursor: pointer;
@@ -513,16 +838,9 @@ ul {
       padding: 5px 10px;
       border-radius: 2px;
       background: inherit;
-      border: 1px dashed #555;
 
       &:hover {
         border: none;
-        background: #0f161e;
-      }
-
-      &:active {
-        color: #000;
-        background: #fff;
       }
     }
   }
@@ -545,11 +863,9 @@ ul {
 #Footer {
   padding: 20px 5px;
   display: flex;
-  color: #ece9ff;
   min-height: 150px;
   text-align: center;
   align-items: center;
-  background: #000;
   flex-direction: column;
   justify-content: center;
 
@@ -562,21 +878,10 @@ ul {
   ul {
     display: flex;
 
-    li a {
-      svg {
-        width: 25px;
-        height: 25px;
-        margin: 5px;
-        fill: #9fa4ff;
-
-        &:hover {
-          fill: #d0d3ff;
-        }
-
-        &.angel_svg__angel:hover path:last-child {
-          fill: #d0d3ff;
-        }
-      }
+    li a svg {
+      width: 25px;
+      height: 25px;
+      margin: 5px;
     }
   }
 }
@@ -599,7 +904,6 @@ ul {
         height: 5px;
         margin: 0 7px 0 5px;
         border-radius: 50%;
-        background: #dcffc4;
       }
     }
   }
