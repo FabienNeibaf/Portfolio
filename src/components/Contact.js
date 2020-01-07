@@ -65,7 +65,7 @@ const Contact = () => {
 
   return (
     <section id="Contact">
-      <h2 className="title">Let&apos;s discuss about your next project</h2>
+      <h2 className="title">Let&apos;s discuss your next project</h2>
       {state.toastMsg ? <Toast msg={state.toastMsg} /> : null}
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">
