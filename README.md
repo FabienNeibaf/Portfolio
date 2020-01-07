@@ -7,6 +7,12 @@ Currently, I'm starting to build mobile apps.
 
 ![Portfolio](src/images/Portfolio.png)
 
+# Technologies
+- React
+- HTML5
+- SASS
+- EmailJS
+
 # Projects
 - Calculata
   - [Live demo](https://calculata.herokuapp.com/)
@@ -30,10 +36,12 @@ Currently, I'm starting to build mobile apps.
   - [Live demo](https://fabienneibaf.github.io/Dashboard/)
   - [Source Code](https://github.com/FabienNeibaf/Dashboard)
 
-
 # Author
 - Github: https://github.com/FabienNeibaf
 - Email: fabienrakotomampiandra@gmail.com
+
+# Contribute
+Feel free to contact me if you want to contribute.
 
 # Follow me
 - [LinkedIn](https://www.linkedin.com/in/fabien-rakotomampiandra-96567b17b/)
