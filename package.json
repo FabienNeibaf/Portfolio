@@ -4,7 +4,7 @@
   "description": "Showcase the work I've done so far",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "deploy": "gh-pages -d dist",
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"

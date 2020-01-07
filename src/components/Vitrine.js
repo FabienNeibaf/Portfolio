@@ -37,17 +37,22 @@ const Vitrine = () => (
           &gt; Fabien RAKOTOMAMPIANDRA
         </p>
         <p>
-          Full-stack web developer with a strong analytical background and 03 years of experience
+          Software engineer with a strong analytical mindset and 3+ years of experience
           building desktop and web applications.
         </p>
         <p>
-          Graduated in Mathematics and Computer Science.
+          Studied computer science, mathematics, and public law in college.
+          <br />
+          Have Bachelor&apos;s degrees in Mathematics and Computer Science and in Public Law.
+          <br />
+          Completed all of the theoretical courses for the Master&apos;s in Mathematics and
+          Computer Science.
         </p>
         <p>
-          Love to solve problems and challenge himself.
+          Love to solve problems and challenge myself.
         </p>
         <p>
-          Pursued a legal study and have a Bachelor in Public Law.
+          Currently looking for my next developer job -- feel free to contact me!
         </p>
       </div>
     </div>

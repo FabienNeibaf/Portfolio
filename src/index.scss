@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arizonia|Charmonman:700|Abel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arizonia|PT+Mono|Abel&display=swap');
 
 html {
   font-size: 16px;
@@ -15,7 +15,7 @@ html {
 * {
   font-size: 1rem;
   box-sizing: border-box;
-  font-family: Abel;
+  font-family: Abel, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1,
@@ -47,6 +47,24 @@ ul {
 #App {
   overflow: auto;
   max-height: 100vh;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 
   // THEME
   .skills {
@@ -62,33 +80,23 @@ ul {
     }
   }
 
-  #avatar {
-    ul {
-      background: #141c24;
-      border: 1px dashed #444;
+  .connect {
+    background: #141c24;
+    border: 1px dashed #444;
 
-      li {
+    li a {
+      &:hover {
+        svg {
+          fill: #d0d3ff;
 
-        a {
-
-          &:hover {
-            svg {
-              fill: #d0d3ff;
-
-              &.angel_svg__angel path:last-child {
-                fill: #d0d3ff;
-              }
-            }
-          }
-
-          svg {
-            fill: #9fa4ff;
+          &.angel_svg__angel path:last-child {
+            fill: #d0d3ff;
           }
         }
+      }
 
-        &.toggle {
-          background: #181e28;
-        }
+      svg {
+        fill: #9fa4ff;
       }
     }
   }
@@ -173,10 +181,10 @@ ul {
       .theme button:active img {
         background: #eef1ff;
       }
-    }
 
-    #avatar img {
-      border: 1px dashed #777;
+      .connect .toggle {
+        border-top: 1px dashed #444;
+      }
     }
 
     #Vitrine {
@@ -259,10 +267,10 @@ ul {
       .theme button:active img {
         background: #141c24;
       }
-    }
 
-    #avatar img {
-      border: 1px dashed #000;
+      .connect .toggle {
+        border-top: 1px dashed #eef1ff;
+      }
     }
 
     #Vitrine {
@@ -324,6 +332,7 @@ ul {
 
 // GENERAL
 #Header {
+  top: 0;
   width: 100%;
   height: 12vw;
   display: flex;
@@ -446,53 +455,27 @@ ul {
       }
     }
   }
-}
 
-#avatar {
-  left: 0;
-  right: 0;
-  width: 15vw;
-  height: 15vw;
-  bottom: calc(-15vw / 2);
-  margin: auto;
-  padding: 2px;
-  position: absolute;
-
-  @media (max-width: 500px) {
-    min-width: 40px;
-    max-width: 40px;
-    min-height: 40px;
-    max-height: 40px;
-    position: unset;
-  }
-
-  img {
-    width: 100%;
-    height: 97%;
-    border-radius: 50%;
-    background: inherit;
-  }
-
-  ul {
+  .connect {
+    left: 0;
+    right: 0;
+    top: 100%;
     width: 50px;
     margin: auto;
     border-top: none;
-    margin-top: -25px;
-    padding-top: 15px;
+    position: absolute;
     text-align: center;
     border-radius: 0 0 30px 30px;
 
     @media (max-width: 500px) {
-      width: 32px;
+      left: 3%;
+      margin: 0;
+      width: 40px;
     }
 
-    &:hover {
-      margin-top: -15px;
-
-      li {
-        opacity: 1;
-        height: 40px;
-      }
+    &:hover li {
+      opacity: 1;
+      height: 40px;
     }
 
     li {
@@ -513,14 +496,13 @@ ul {
       &.toggle {
         opacity: 1;
         height: auto;
-        padding: 8px 0 1px;
-        text-align: center;
+        padding: 5px;
         border-radius: 0 0 30px 30px;
 
         .animate {
           width: 25px;
           height: 25px;
-          display: inline-block;
+          margin: auto;
           animation-name: rotate;
           animation-duration: 1s;
           animation-play-state: paused;
@@ -539,6 +521,7 @@ ul {
           svg {
             width: 100%;
             height: 100%;
+            transform: translateX(-2px);
           }
 
           @keyframes rotate {
@@ -567,13 +550,14 @@ ul {
 
   @media (max-width: 500px) {
     margin-top: 60px;
+    padding-top: 5mm;
   }
 
   .about,
   .skills {
     flex: 1;
+    padding: 4%;
     min-width: 49%;
-    padding: 7.5vw 5% 5%;
 
     @media (max-width: 400px) {
       padding-left: 2%;
@@ -600,13 +584,17 @@ ul {
       padding: 5px 20px;
 
       @media (max-width: 500px) {
+        margin: 5px;
         padding: 5px;
       }
 
       &.name {
-        font-size: 1.1em;
-        font-weight: 700;
-        font-family: Charmonman;
+        font-size: 2em;
+        font-family: 'PT Mono';
+
+        @media (max-width: 550px) {
+          font-size: 1.4em;
+        }
       }
     }
   }

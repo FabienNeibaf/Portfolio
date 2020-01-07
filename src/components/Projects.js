@@ -15,7 +15,7 @@ const list = [
     img: calculata,
     demo: 'https://calculata.herokuapp.com/',
     github: 'https://github.com/FabienNeibaf/Calculator',
-    description: "It's a parser based calculator. You can type any mathematical valid expressions.",
+    description: 'This parser-based calculator uses Javascript to evaluate any type of mathematically valid expresion, from simple arithmetic to algebraic expressions.',
     technologies: ['Javascript', 'HTML5', 'CSS3', 'Parser'],
   },
   {
@@ -23,7 +23,7 @@ const list = [
     img: battleship,
     demo: 'https://fabienneibaf.github.io/Battleship/',
     github: 'https://github.com/FabienNeibaf/Battleship',
-    description: "It's a game where the player fight against the machine. The first who sinks all the opponent ships win the game.",
+    description: "This program mimics the original battleship boardgame, allowing the user to place battleships of different sizes on a playing field and then play against the computer until one side has sunken the other's ships.",
     technologies: ['Javascript', 'HTML5', 'CSS3'],
   },
   {
@@ -31,7 +31,7 @@ const list = [
     img: earthdiary,
     demo: 'https://earthdiary.herokuapp.com/',
     github: 'https://github.com/maelfosso/microverse_ror_final_project',
-    description: 'A facebook like social network. User can create like and comment post. He can add/remove friend. And for any event he receives notifications.',
+    description: 'A Facebook-like social network. Users can create, like, and comment on posts. Users can also add/remove friends, and receive notifications for updates.',
     technologies: ['Javascript', 'HTML5', 'CSS3', 'Ruby on Rails', 'JQuery', 'PostgreSQL'],
   },
   {
@@ -39,7 +39,7 @@ const list = [
     img: tada,
     demo: 'https://fabienneibaf.github.io/TodoList/',
     github: 'https://github.com/FabienNeibaf/TodoList',
-    description: 'A todo list application. You can manage all your tasks and group them into projects and priority.',
+    description: 'A Todo list application that allows users to manage multiple tasks and group them into projects and by priorities.',
     technologies: ['Javascript', 'HTML5', 'CSS3'],
   },
   {
@@ -47,7 +47,7 @@ const list = [
     img: tictactoe,
     demo: 'https://fabienneibaf.github.io/TicTacToe/',
     github: 'https://github.com/FabienNeibaf/TicTacToe',
-    description: 'This is a strategic game which goal is to align the first tree marker. Players take turn in positionning their respective marker.',
+    description: 'This is a strategic game, the goal of which is to be the first to align three markers. Players take turn in positioning their respective marker.',
     technologies: ['Javascript', 'HTML5', 'CSS3'],
   },
   {
@@ -55,7 +55,7 @@ const list = [
     img: weather,
     demo: 'https://fabienneibaf.github.io/Weather-App/',
     github: 'https://github.com/FabienNeibaf/Weather-App',
-    description: 'Get the forecast for a location of your choice by searching it through the search box. By default it looks up your location and if available use it to deliver your current forecast.',
+    description: 'This weather app allows you to get the forecast of a location of your choice by typing it in the search box. By default, the app detects your current location, and if available, use it to get the weather information.',
     technologies: ['Javascript', 'HTML5', 'CSS3', 'REST/API'],
   },
   {
@@ -63,7 +63,7 @@ const list = [
     img: dashboard,
     demo: 'https://fabienneibaf.github.io/Dashboard/',
     github: 'https://github.com/FabienNeibaf/Dashboard',
-    description: "It's a concept design of a dashboard for Microverse,inc (remote school)",
+    description: 'This is a concept design for an updated dashboard for Microverse, a remote software development school. The design groups curricula together, allows users to easily track their progress, and clearly displays a daily schedule.',
     technologies: ['Javascript', 'HTML5', 'CSS3'],
   },
 ];
