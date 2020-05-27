@@ -37,7 +37,7 @@ const Vitrine = () => (
           &gt; Fabien RAKOTOMAMPIANDRA
         </p>
         <p>
-          Software engineer with a strong analytical mindset and 3+ years of experience
+          Software engineer with a strong analytical mindset and 4+ years of experience
           building desktop and web applications.
         </p>
         <p>
