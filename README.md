@@ -1,7 +1,7 @@
 # About me
 I'm a software engineer with a strong analytical mindset.
 I studied computer science, mathematics, and public law in college.
-I have Bachelor's degrees in both and also completed all of the theoretical courses for my Master's in Mathematics and Computer Science.
+I have Bachelor's degrees in both fields and also completed all of the theoretical courses for my Master's in Mathematics and Computer Science.
 I have more than 4 years of experience in building desktop and web applications.
 Currently, I'm starting to build mobile apps.
 
